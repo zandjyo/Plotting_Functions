@@ -27,6 +27,7 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   "WARM" is > 0.5std from the mean, "COLD" is < 0.5std from the mean "MED" is between the two   
    Example:  
    Get_TEMP(data=data_1, plotT=T)
+![image](https://user-images.githubusercontent.com/5395237/154738484-0685070f-192d-473b-a768-13cc609cc76c.png)
 
 <B>plot_centroid_num.r</B>  
  Function for plotting RACE survey data for any species by temperature and depth (plotT=1) and specified length or by location (plotT=2)and specified length  
@@ -38,15 +39,22 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
  colx = 1 is a yellow to brown color scheme friendly to B&W and colorbline colx=2 is a rainbow color scheme  
  Confidence intervals are based on 1.96*SE  
  Example plots:  
- plot_centroid_num(data=data1,REG=T,plotT=1,PATH=F,ELLIP=F,p1=0.95,colx=1,thin=F)  
- plot_centroid_num(data=data_COD,REG=T,plotT=2,PATH=F,ELLIP=F,p1=0.95,colx=1,thin=F)  
-  
+ plot_centroid_num(data=data_1,REG=T,plotT=1,PATH=F,ELLIP=F,p1=0.95,colx=1,thin=F)  
+ ![image](https://user-images.githubusercontent.com/5395237/154738733-af851ac9-69a6-4767-88bf-21ed8450a65d.png)
+ 
+ plot_centroid_num(data=data_1,REG=T,plotT=2,PATH=F,ELLIP=F,p1=0.95,colx=1,thin=F)  
+ ![image](https://user-images.githubusercontent.com/5395237/154738818-77aec738-77fe-4d4d-bef4-46ff34ef2d78.png)
+ 
 <B>plot_dist_num.r</B>  
    Function for plotting data by temperature (plotT=1) or location (plotT=2)and specified length   
    Uses data from Get_DATA() function and requires the Get_TEMP() function  
    Plots individual bins specified when data was retrieved.   
    example plots:  
-   plot_dist_num(data=data_1,bin=1,plotT=1)
+   plot_dist_num(data=data_1,bin=3,plotT=1)
+   ![image](https://user-images.githubusercontent.com/5395237/154739164-80d58f06-8d1e-4c8b-a429-b1c2c9e2397b.png)
+   plot_dist_num(data=data_1,bin=3,plotT=2)
+   ![image](https://user-images.githubusercontent.com/5395237/154739224-4b5cd684-f881-459e-8e74-d15b5b0286fb.png)
+
 
 <B>plot_SEX_num.r</B>  
   Function to plot RACE survey data centroids of temperature and depth (plotT=1) or location (plotT=2) by sex
@@ -55,7 +63,9 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   Requires the Get_TEMP() function  
   Examples:   
   plot_SEX_num(data=data_1,plotT=2,p1=0.9)  
+  ![image](https://user-images.githubusercontent.com/5395237/154739387-454139ef-3630-4dab-b7a5-73fa3822fcc0.png)
   plot_SEX_num(data=data_1,plotT=1,p1=0.9)  
+  ![image](https://user-images.githubusercontent.com/5395237/154739432-8702d0aa-c8d9-4298-8e32-65a3d8a62bfa.png)
   
  <B>plot_year_num.r</B>  
   Function to plot RACE survey data centroids of temperature and depth (plotT=1) or location (plotT=2) by year
@@ -63,6 +73,10 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   p1 indicates the area of confidence interval ellipse  
   Example:   
   plot_YEAR_num(data=data_1,plotT=1,REG=TRUE,PATH=TRUE,ELLIP=TRUE,p1=0.9,colx=1)
+  ![image](https://user-images.githubusercontent.com/5395237/154739518-5a620add-620b-46bd-bf0a-b4cbf0b82719.png)
+  plot_YEAR_num(data=data_1,plotT=2,REG=TRUE,PATH=TRUE,ELLIP=TRUE,p1=0.9,colx=1)
+  ![image](https://user-images.githubusercontent.com/5395237/154739601-b25a8a02-7910-4278-aa13-b83afd9e86de.png)
+
  
 <B>Plotting_bins.r</B>  
   Function for creating multiple PDFs of length bins as defined in the Get_DATA()  
