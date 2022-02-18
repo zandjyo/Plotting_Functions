@@ -9,7 +9,7 @@ To use any of these functions you must start with the Get_DATA.R  which will pul
   survey 52=AI,98=EBS Shelf, 78=EBS Slope, and 47 = GOA  
   bins can either be specified as in bins=c(0,100,200,300,400) or as percentiles based on time series length composition frequency 
   with the number of divisions entered in bins e.g. bins=5 would be 5 percentiles.  
-  Example use code below for EBS Pollock and with 5 percentile bins  
+  Example use code below for EBS Pollock and with 5 percentile bins:  
   afsc_username=""  
   afsc_password=""  
   data_1<-Get_DATA(username=afsc_username,password=afsc_password,species=21720,survey = 98,bins = 5,FIG=T,yr=1982:2021)  
@@ -26,7 +26,7 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   The temperature anomaly is based on the full timeseries average bottom temp.  
   "WARM" is > 0.5std from the mean, "COLD" is < 0.5std from the mean "MED" is between the two   
    Example:  
-   Get_TEMP<-function(data=data_1, plotT=T)
+   Get_TEMP(data=data_1, plotT=T)
 
 <B>plot_centroid_num.r</B>  
  Function for plotting RACE survey data for any species by temperature and depth (plotT=1) and specified length or by location (plotT=2)and specified length  
@@ -65,7 +65,8 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   plot_YEAR_num(data=data_1,plotT=1,REG=TRUE,PATH=TRUE,ELLIP=TRUE,p1=0.9,colx=1)
  
 <B>Plotting_bins.r</B>  
-  Function for creating multiple PDFs of length bins as defined in the Get_DATA() Function will plot into your working directory
+  Function for creating multiple PDFs of length bins as defined in the Get_DATA()  
+  Function will plot into your working directory  
   Each PDF page will hold all years for each of the specified bins in the Get_DATA() function  
   Example:  
   Plotting_bins(datas=data_1)
