@@ -84,3 +84,35 @@ You will also need to source the Get_TEMP.r file to set up temperatures for the 
   Each PDF page will hold all years for each of the specified bins in the Get_DATA() function  
   Example:  
   Plotting_bins(datas=data_1)
+  
+  
+  
+<B><I>Series of plots for doing boxplots by temperature, depth, and location </B></I>  
+<B>Plot_WC.r</B>  
+<I>Get_td(data=data_1)</I>  
+ Function which pulls the temperature data from the data file.  
+ <I>Get_Mean_td(data=data_1)</I>
+ Function to calculate both mean shelf temperatures and mean temperature for the species at the different bins.  
+<I>Plot_WC(data=data_1,plotT=1,depth=c(-250,0))</I>
+ Function to plot boxplots of bins by depth and year temperature regine (warm, med, cold). Two possible plots, first is simply the boxplot by depth, the second includs lines in red grey and blue depicting shelf mean for warm, med, and cold years. 
+ Depth sets the Y-axis of the plot.  
+ Plot 1:  Plot_WC(data=data_1,plotT=1,depth=c(-120,0))  
+ ![image](https://user-images.githubusercontent.com/5395237/154748510-a70ae62a-3cde-4bc1-b9de-1a3debdae52e.png)  
+ Plot 2: Plot_WC(data=data_1,plotT=2)  
+ ![image](https://user-images.githubusercontent.com/5395237/154748479-573af5bc-c411-494d-b659-4aa8936e1c9e.png)  
+<I>Plot_LL(data=data_1,plotT=1)</I>  
+  Function to plot boxplots of bins by latitude and longlitude by annual temperature regine (warm, med, cold). Two possible plots, first is simply the boxplot by depth, the second includs lines in red grey and blue depicting shelf mean for warm, med, and cold years.  
+  Plot_LL(data_1,plotT=1)  
+  ![image](https://user-images.githubusercontent.com/5395237/154748949-eb378f2a-d1cc-452f-a4e5-8f0f8edb94bb.png)  
+  Plot_LL(data_1,plotT=2)  
+  ![image](https://user-images.githubusercontent.com/5395237/154749033-6fc1bac0-57f8-4d30-82dd-e288de6f39ea.png)  
+
+
+ 
+ 
+ <B> Plot of all 'Major' species locations by size classes in the AFSC bottom trawl surveys </B>  
+ You can click the species on and off using the legend. Each ball represents a size class by pentile for each species for each survey (1982-2017). Smaller bubbles are smaller size classes. The lines go through the mean of each size class for each species for all survey years and can also be toggled on or off.  
+  
+ https://chart-studio.plotly.com/~zandjyo/60.embed
+ 
+ 
