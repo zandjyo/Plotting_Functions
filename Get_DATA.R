@@ -6,9 +6,9 @@
 ## Example use code below for GOA Pcod and with 5 percentile bins 
 #3 afsc_username=""
 ## afsc_password=""
-## data_1<-Get_DATA(username=afsc_username,password=afsc_password,species=21720,survey = 98,bins = 5,FIG=T,yr=1982:2021)
+## data_1<-Get_DATA(username=afsc_username,password=afsc_password,species=21740,survey = 98,bins = 5,FIG=T,yr=1982:2021)
 
-Get_DATA<- function(username=afsc_username,password=afsc_password,species=21720,survey = 98,bins = 5, FIG=T,yr=c(1982:2016)) {
+Get_DATA<- function(username=afsc_username,password=afsc_password,species=21740,survey = 98,bins = 5, FIG=T,yr=c(1982:2016)) {
 
 
   require(RODBC)
