@@ -1,9 +1,10 @@
 ## Created 1/26/2017 by Steve Barbeaux 
 ## This function pulls RACE survey haul and length data for later analysis
-## survey 52=AI,98=EBS Shelf, 78=EBS Slope, and 47 = GOA
+## species is a list of species codes for all the species you wish to investigate, the species codes must be in quotes.
+## survey 52=AI, 98=EBS Shelf, 78=EBS Slope, and 47 = GOA
 ## bins can either be specified as in bins=c(0,100,200,300,400) or as percentiles based on time series length composition frequency 
 ## with the number of divisions entered in bins e.g. bins=5 would be 5 percentiles
-## Example use code below for GOA Pcod and with 5 percentile bins 
+## Example use code below for EBS Pcod and EBS pollock and with 5 percentile bins 
 ## afsc_username=""
 ## afsc_password=""
 ## dataM<-Get_MDATA(afsc_username,afsc_password,species=c("21740","21720"),survey = 98,bins = 5,yr=1982:2021)
