@@ -1,3 +1,5 @@
+<B>WARNING!!! These functions multispecies plots are new and relatively untested...</B>  
+
 To use any of these functions you must start with the Get_MDATA.R  which will pull data from AFSC. You need to supply a password, username, list of species, and bins you wish to use.
 
 <B>Get_MDATA.r</B>  
