@@ -2,7 +2,7 @@
 ## This function pulls RACE survey haul and length data for later analysis
 ## survey 52=AI,98=EBS Shelf, 78=EBS Slope, and 47 = GOA
 ## bins can either be specified as in bins=c(0,100,200,300,400) or as percentiles based on time series length composition frequency 
-## with the number of divisions entered in bins e.g. bins=5 would be 5 percentiles
+## with the number of divisions entered in bins e.g. bins=5 would be 5 percentiles, er... pentiles?
 ## Example use code below for GOA Pcod and with 5 percentile bins 
 #3 afsc_username=""
 ## afsc_password=""
