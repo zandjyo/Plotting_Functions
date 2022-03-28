@@ -10,12 +10,12 @@
 
 
 
-Get_TEMP<-function(data=data1, plotT=T){
+Get_TEMP<-function(dataT=data1, plotT=T){
 
   require(data.table)
   
-  location      <- data.table(data$location)
-  survey        <- unique(data$length$SURVEY_DEFINITION_ID)
+  location      <- data.table(dataT$location)
+  survey        <- unique(dataT$length$SURVEY_DEFINITION_ID)
 
 
 
