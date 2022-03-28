@@ -13,7 +13,7 @@ plot_dist_num<- function(data=data_COD,bin=1,plotT=1){
   require(ggplot2)
   require(grid)
   
-  td1 <- Get_TEMP(data=data, plotT=F)
+  td1 <- Get_TEMP(dataT=data, plotT=F)
   location   <- data.table(data$location)
   length    <- data.table(data$length)
   location_poll <- data.table(data$location_poll)
