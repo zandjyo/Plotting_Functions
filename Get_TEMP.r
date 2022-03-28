@@ -48,11 +48,11 @@ Get_TEMP<-function(dataT=data1, plotT=T){
 
   
 
-  area<-area[SURVEY==survey]
+  area<-area[SURVEY%in%survey]
   
   area<-subset(area,area$STRATUM<800)
 
-if(survey==78){area=data.table(SURVEY=78,STRATUM=unique(data$location$STRATUM),AREA=1)}
+if(survey %in% 78){area=data.table(SURVEY=78,STRATUM=unique(data$location$STRATUM),AREA=1)}
 
   loca<-location[!is.na(TEMP)]
   loca<-loca[!is.na(STEMP)]
