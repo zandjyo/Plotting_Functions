@@ -68,7 +68,7 @@ plot_dist_num<- function(data=data_COD,bin=1,plotT=1){
     dataT$PLOT[is.na(dataT$PLOT==T)] <- 0
     dataT$bin2[is.na(dataT$bin2==T)] <- 0
     dataT <- dataT[order(dataT$bin2),]
-
+     
     label2<-array(dim=length(unique(dataT$bin2)))
    
   binsx<-c(0,sort(unique(data3$bin2)))
@@ -86,12 +86,13 @@ plot_dist_num<- function(data=data_COD,bin=1,plotT=1){
 #label2<-ordered(label2,levels=unique(label2))
 
    label2<-data.frame(bin2=binsx,LABEL2=factor(label2))
-   label2$ID<-as.numeric(factor(label2$LABEL2)) 
+   label2$ID<-as.numeric(factor(label2$bin2)) 
    dataT<-merge(dataT,label2,by="bin2")
 
     nc<-min(5,trunc(length(unique(data3$YEAR))/4)+1)
     td1$TEMPR=1;td1$DEPTHR=1; td1$bin2=1;td1$LABEL2="0"
-
+    
+       
     d <- ggplot(dataT,aes(x=TEMPR,y=-DEPTHR,color=LABEL2, shape=LABEL2,size=LABEL2))
     d <- d + geom_rect(data=td1,aes(fill=REGI),xmin=-Inf,xmax=Inf,ymin=-Inf,ymax=Inf,alpha=0.2,linetype=0)
     d <- d + geom_point()
@@ -158,8 +159,6 @@ plot_dist_num<- function(data=data_COD,bin=1,plotT=1){
   dataL$PLOT[is.na(dataL$PLOT==T)] <- 0
   dataL$bin2[is.na(dataL$bin2==T)] <- 0
   
-  dataL   <- dataL[order(dataL$bin2),]
-
   binsx<-c(0,sort(unique(data3$bin2)))
   label2<-array(dim=length(binsx))
   lab1<-c(binsx,round(max(data3$PLOT)))
@@ -167,16 +166,19 @@ plot_dist_num<- function(data=data_COD,bin=1,plotT=1){
   lab2[1]<-"0"
   label2[1]<-"0"
   label2[2]<-paste(1,"-",lab1[3],sep="")
-
+ 
    for(i in 4:length(lab1)){
         label2[i-1]<-paste(as.character(lab2)[i-1],"-",as.character(lab1)[i],sep="")
       }
-
-   label2<-data.frame(bin2=binsx,LABEL2=factor(label2))
-   label2$ID<-as.numeric(factor(label2$LABEL2)) 
-   dataL<-merge(dataL,label2,by="bin2")
-
   
+   
+   label2<-data.frame(bin2=binsx,LABEL2=factor(label2))
+   
+     
+   
+   label2$ID<-as.numeric(factor(label2$bin2)) 
+   dataL<-merge(dataL,label2,by="bin2")
+      
     td1$LON=1;td1$LAT=1; td1$bin2=1;td1$LABEL2="0"
     nc<-min(5,trunc(length(unique(data3$YEAR))/4)+1)
     d <- d + geom_point(data=dataL,aes(x=LON,y=LAT,color=LABEL2,shape=LABEL2,size=LABEL2))
