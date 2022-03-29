@@ -138,11 +138,11 @@ Get_DATA<- function(username=afsc_username,password=afsc_password,species=21720,
   length$TEMPR    <- round(length$TEMP,1)
   length$DEPTHR   <- round(length$DEPTH)
   
-  length          <- merge(length,location_poll,by = c("YEAR","LON","LAT","SURVEY_DEFINITION_ID", "SPECIES_CODE"))
+  length          <- merge(length,location_poll,by = c("YEAR","LON","LAT","SURVEY_DEFINITION_ID", "STRATUM","SPECIES_CODE"))
   length          <-subset(length,!is.na(length$CPUE))
 
   
-  if(length(bins>1)){
+  if(length(bins)>1){
     bins2<-bins
     bins<-length(bins2)
     }
